@@ -1,0 +1,17 @@
+{
+  "name": "vercel-ip",
+  "version": "1.0.0",
+  "description": "get client ip with vercel edge",
+  "main": "api/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nodeana",
+  "license": "ISC",
+  "devDependencies": {
+    "vercel": "^39.2.2"
+  },
+  "dependencies": {
+    "@vercel/edge": "^1.1.4"
+  }
+}
