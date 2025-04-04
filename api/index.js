@@ -13,7 +13,7 @@ export default function (req) {
   const clientIp = req.headers.get("CF-Connecting-IP");
 
   // Concatenate the original IP and the X-Forwarded-For IPs
-  const combinedIps = ["IP Origem",originalIp,"\n","Ip Cliente CF", clientIp].join(", ");
+  const combinedIps = ["IP Origem:",originalIp,"\n","Ip Cliente CF:", clientIp].join(" ");
 
   return new Response(combinedIps);
 }
