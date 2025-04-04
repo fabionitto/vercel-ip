@@ -13,7 +13,7 @@ export default function (req) {
   const xForwardedFor = req.headers.get("X-Forwarded-For");
 
   // If the header exists, use the first IP address in the list
-  const ip = xForwardedFor ? xForwardedFor.split(",")[0].trim() : "IP not found";
+  const forwardedIp = xForwardedFor ? xForwardedFor.split(",")[0].trim() : "IP not found";
 
   // Concatenate the original IP and the X-Forwarded-For IP
   const combinedIp = `${originalIp}, ${forwardedIp}`;
