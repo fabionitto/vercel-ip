@@ -1,0 +1,36 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  margin-top: 40px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+}
+
+.legal-notice {
+  color: #555;
+}
+
+.legal-notice h2 {
+  color: #333;
+}
+
+.legal-notice p {
+  margin: 10px 0;
+}
