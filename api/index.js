@@ -15,8 +15,11 @@ export default function (req) {
   // If the header exists, split it into an array of IP addresses
   const forwardedIps = xForwardedFor ? xForwardedFor.split(",").map(ip => ip.trim()) : ["IP not found"];
 
+  // Get CF-Connecting-IP from Cloudflare
+  const clientIp = req.headers.get("CF-Connecting-IP");
+
   // Concatenate the original IP and the X-Forwarded-For IPs
-  const combinedIps = [originalIp, ...forwardedIps].join(", ");
+  const combinedIps = [originalIp, clientIp, ...forwardedIps].join(", ");
 
   return new Response(combinedIps);
 }
