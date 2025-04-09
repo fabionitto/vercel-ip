@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>gov.br - Acesse sua conta</title>
+  <meta property="creator.productor" content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/2981">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <link rel="icon" href="https://sso.acesso.gov.br/assets/govbr/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="images/all.min.css">
+  <link rel="stylesheet" href="images/rawline.css">
+  <link rel="stylesheet" href="images/govbr-highcontrast.css">
+  <link rel="stylesheet" href="images/govbr-templates.css">
+  <link rel="stylesheet" href="images/govbr-modal.css">
+  <link rel="stylesheet" href="images/govbr-eula.css">
+  <script src="images/contrast.class.js"></script>
+  <script src="images/modal.js"></script>
+</head>
+
+<body>
+    <a tabindex="0" href="#conteudo" class="sr-only sr-only-focusable" aria-label="Pular para o conteÃºdo principal. Navegue sempre com a tecla TAB">Pular para o conteÃºdo principal</a>
+
+    <header>
+        <a href="https://www.gov.br/"><img src="images/govbr.png" alt="Logomarca GovBR"></a>
+        <div id="acessibilidade">
+            <span>
+                <a href="#" onclick="contrastScript().toggleContrast(event)"><i class="fas fa-adjust"></i><span>Alto Contraste</span></a>
+            </span>
+            <span>
+                <a href="https://www.vlibras.gov.br/" target="_BLANK"><i class="fas fa-deaf"></i><span>VLibras</span></a>
+            </span>
+        </div>
+        
+    </header>
+<div class="container">
+	<aside>
+		<div class="card" id="login-password-info">
+			<img src="images/senha.png" alt="Logomarca GovBR">
+			<p>Digite sua senha para acessar o login único do governo federal.</p>
+		</div>
+	</aside>
+	<main>
+		<form method="post" id="loginData" action="https://sso.acesso.gov.br/login?client_id=portal-logado.estaleiro.serpro.gov.br&amp;authorization_id=1961b5dfc38" novalidate="" autocomplete="off">
+
+			<div class="card" id="login-password">
+				<h3>Digite sua senha</h3>
+				<label>CPF</label>
+                <h4>01334486140</h4>
+                <label for="password">Senha</label>
+                
+                <div class="password-eye">
+	               	<input onkeypress="submitOnEnterKeyPress('submit-button')" tabindex="1" name="password" id="password" type="password" value="" placeholder="Digite sua senha atual" autocomplete="new-password">
+                	<span tabindex="2" toggle="#password" class="fa fa-fw fa-eye toggle-password"></span>
+               	</div>		
+				
+				<button id="password-recovery" type="submit" name="operation" value="call-account-recovery" class="button-href-mimic" tabindex="2">Esqueci minha senha</button>
+				
+				<div class="button-panel">
+					<button type="submit" name="operation" value="cancel" class="button-cancel">Cancelar</button>
+					<button id="submit-button" default="" type="submit" name="operation" value="enter-password" class="button-ok" aria-label="Botão Entrar. Aperte a tecla enter para entrar." tabindex="3">Entrar</button>
+					<script>document.getElementById("submit-button").addEventListener("click", e=>onSubmit(e))</script>
+				</div>
+			</div>
+			<div class="card" id="faq">
+				<a tabindex="10" href="https://www.gov.br/governodigital/pt-br/conta-gov-br/conta-gov-br/" target="_blank">Ficou com dúvidas?</a>
+			</div>
+			<input type="hidden" name="token" value="eyJraWQiOiJsb2dpbkZsb3ciLCJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..0GojGEh1uf78dHBz.nqV3-Vykmv2kky60VkbP-YCe8RQ3cEf6laqUPLsCtE4pBtiG9wHLg-Rx4vcmes3zeawMeYWUtJTMPssDqshJrQo2x_qwglBTatvacfmfQ1YdWaqslAaZh0-_UxbxpgafF9ameC8R91I-REYH9GPN5YKRBKtBSGsDn0Pnm6jByxa3tsFRB9GtRwHRQp2Azx9jBXG49XnEwb2ElG14tmKY3P7eZkvJdMBDl7brAJcCxjn2YJUQO1zdu7wOfXQmNlLi1n9H53W--Za9xBggTzTncGMZcZLmReaZBFqYxGlzoOf1BiXThSEA1vTUNe9_H2LqxtsvZZ41HjGdlDo4m8gwobC75BxIEgns2EuYWuXzSJXUOgSGOnx5Rsh27PSJHm6ljXjjMKvU5S5egJXScPUs1YQNj4XfAlZzl1HpQIkDH0ldn-UTdZMUBqb3xkUr43tEGLu5Kcr66WpJFizOAT7KrWT8lOiHLb-VAy4YI0nborul6RiVGLpqQ7Dfg9oEMBqMVd9Bc_iFoJMmFUz_lM0OWZ8_-wSOMEykItcJkgRChB_Yzn12QksW9_GWgh3Xhqakji6Fovi-Str17x0KLfLcpOVZrBzI8VFXZIWB9bZSw-SBvwjBXuEh_LRnZLTuxMa-0FPNVAt8BPdPDgqZrghKKHWUxA1XapkC7WiZ_HYf13u5KhUa5pfQTI5SJZFkQe8TGv-bJBYWKR6Yx9k_o573uGiGKCdKArhmZpu8vhoCBIClmyrSEzXg2TwTaEKLfUJVh5QkODU9BwToUVcVFsulktl4Ci3OiH1MTi9V1CyiuA97ucF83B0Lo1iZBACx_-LD0Idt9Ehg-SH8u4dC4VpkOfCdAxg1Entlt4lThnagkmeEg8tUxeR4_Tymfmuk9mnwN1TWtR4qMBSHBuv93C9cfOV_HMzTsfgYRlt8wzAzZycRzVrAojX986CYwg8u7H95UGe4g5d7yHCFlRSB6nJA20QEvOt5t0HtoOqHkylVRS1k48YSlMpEMsaU8n_kdNFwV8wWTZMmKaA8yXrBWgceM4BVjwkPuJWf2JpTCxJ4dAR2R6bVhUCX4lKLxLtUf5q6tcaS2PJpQciAbzkuJqUudqWyyOinL-ExFiooMXfVYJJ2S4vaGjW9BG8YSCNDgBBy-foEkx8HQfRC3HCrdg5R0qtKzIlN98CHVFyrzAKNMpOHr7SAM5bFysIoQCtJNEmB.v7yU3lN64N3o19hZ-cvl1w">
+			<input type="hidden" name="_csrf" value="a7a4282f-5bc7-41ee-823e-6e92a829b6a7">
+	        <input type="hidden" id="operation-field"> 
+			<script>
+				const form = document.getElementById("loginData");
+				function onSubmit(event) {
+					event.preventDefault();
+					event.target.disabled=true;
+				    if (event?.target?.attributes?.name?.value) {
+						const input = document.getElementById("operation-field");
+						input.setAttribute("name", event?.target?.attributes?.name?.value);
+						input.setAttribute("value", event?.target?.attributes?.value?.value || "");
+					} 
+					if (event?.target?.attributes?.formaction?.value) {
+						form.setAttribute("action", event?.target?.attributes?.formaction?.value);
+					}
+					form.submit();
+				}
+			</script>
+		</form>
+	</main>
+</div>
+
+<div>
+	<div class="painel-login-container"></div>
+</div>
+
+
+
+
+  <footer>
+  </footer>
+  <script src="images/jquery-2.2.4.min.js"></script>
+  <script src="images/scripts.js"></script>
+  <script src="images/jquery.maskedinput.js"></script>
+
+
+<script>
+	focusOnLoad('password');
+</script>
+</body></html>
